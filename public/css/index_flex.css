@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* 头部 */
+header{
+    /* 屏幕的80% */
+    width: 80vw;
+    margin: 1rem auto;
+    border-bottom: 1px solid #dedede;
+}
+
+/* 导航栏 */
+nav{
+    display: flex;
+    /* 交叉轴对齐方式（即y轴） 垂直居中 */
+    align-items: center; 
+}
+/* 
+logo占一份
+搜索占6分
+导航项占2分
+ */
+.logo{
+    flex:1;
+
+}
+
+.search{
+    flex:6;
+}
+
+.navbar{
+    flex:2;
+}
+
+.search input{
+    height: 2rem;
+}
+.search input[type="submit"]{
+    width: 3rem;
+    /* 顶部对齐 */
+    vertical-align: top; 
+}
+
+.navbar li{
+    float: left;
+    margin-left: 1rem;
+}
+
+.navbar li a {
+    display: block;
+    width: 3rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+.login{
+    color:#fff;
+    background-color: #007bff;
+    border-radius:0.3rem;
+}
+
+/* 正文 */
+article {
+    width: 80vw;
+    margin: 0 auto 3rem;
+    display: flex;
+}
+
+/* 兴趣列表 */
+.nav-left{
+    flex:1;
+    margin-right: 2rem;
+}
+
+.nav-left a{
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    color: #007bff;
+    padding: 0 1rem;
+}
+
+.nav-left .active{
+    color:#fff;
+    background-color: #007bff;
+    border-radius: .3rem;
+}
+
+/* 趣点列表 */
+.card-right{
+    flex:6;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 31%;
+    border: 1px solid #dedede;
+    margin:.35rem;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card-body{
+    color: #3e3e3e;
+    padding: 1.25rem;
+}
+
+.card-body h5{
+    font-weight: normal;
+}
+
+/* 脚部 */
+footer{
+    text-align: center;
+    color: #3e3e3e;
+}
+
+/* 响应式 */
+@media (max-width:767px){
+    header, article {
+        width: 100vw;
+    }
+
+    .logo{
+        flex:1.5;
+    }
+    .search {display: none;}
+
+    article{
+        display: block;
+    }
+
+    .nav-left a {
+        display: inline-block;
+    }
+
+    .card{
+        width: auto;
+    }
+}
